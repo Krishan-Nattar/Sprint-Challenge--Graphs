@@ -4,7 +4,7 @@ from world import World
 
 import random
 from ast import literal_eval
-from util import Stack, Queue, moves_934 
+from util import Stack, Queue
 
 # Load world
 world = World()
@@ -203,25 +203,6 @@ def begin_traversal():
 print("Begin Traversal")
 
 begin_traversal()
-# traversal_path = moves_934
-
-# while len(traversal_path) >= 934:
-#     count += 1
-#     '''
-#     Continue running the traversal_path function until the traversal_path length is lower than desired amount
-#     '''
-#     if count % 300 == 0:
-#         append_count += 1
-#         directed_path = moves_934[:append_count]
-#         print(append_count)
-
-#     traversal_path = []
-#     visited = {}
-#     player.current_room = world.starting_room    
-#     for movement in directed_path:
-#         directed_movement(movement)
-
-#     begin_traversal()
 
 # TRAVERSAL TEST
 print(traversal_path)
