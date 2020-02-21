@@ -30,6 +30,10 @@ visited = {}
 room_id_stack = Stack()
 current_room_id = player.current_room.id
 
+directed_path = []
+append_count = 684
+count = 0
+
 def bfs(starting, ending):
     '''
     Take a starting room id and an ending room id. Find the shortest path between the two.
@@ -102,6 +106,8 @@ def reverse_letters(letter):
         return 'w'
     if letter == 'w':
         return 'e'
+
+    # Can return from a dictionary
 
 def create_room(id, exits):
     '''
@@ -199,18 +205,26 @@ print("Begin Traversal")
 begin_traversal()
 # traversal_path = moves_934
 
-while len(traversal_path) >= 934:
+# while len(traversal_path) >= 934:
+#     count += 1
+#     '''
+#     Continue running the traversal_path function until the traversal_path length is lower than desired amount
+#     '''
+#     if count % 300 == 0:
+#         append_count += 1
+#         directed_path = moves_934[:append_count]
+#         print(append_count)
 
-    '''
-    Continue running the traversal_path function until the traversal_path length is lower than desired amount
-    '''
-    traversal_path = []
-    visited = {}
-    player.current_room = world.starting_room    
-    begin_traversal()
+#     traversal_path = []
+#     visited = {}
+#     player.current_room = world.starting_room    
+#     for movement in directed_path:
+#         directed_movement(movement)
 
+#     begin_traversal()
 
 # TRAVERSAL TEST
+print(traversal_path)
 visited_rooms = set()
 player.current_room = world.starting_room
 visited_rooms.add(player.current_room)
